@@ -1,0 +1,317 @@
+#campos_texto {
+    background-color: red;
+    color:white;
+}/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #5d5dff;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    position: relative;
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #5d5dff;
+}
+
+/* Menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Burger menu para móviles */
+.burger-menu {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #5d5dff;
+    color: #fff;
+}
+
+/* Sección de libros */
+#libros-disponibles {
+    padding: 2rem;
+    text-align: center;
+}
+
+.libro-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem;
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.libro-card:hover {
+    transform: translateY(-5px);
+}
+
+.libro-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Formulario de registro */
+#registro {
+    background-color: #e9e9f1;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+#registro-form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+#registro-form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#registro-form button {
+    background-color: #5d5dff;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#registro-form button:hover {
+    background-color: #4a4af0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design para móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+
+    .dropdown:hover .dropdown-content, .dropdown-content {
+        position: static;
+        box-shadow: none;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* ... (estilos existentes) ... */
+
+
+/* Sección de carga de libros - Estilos Mejorados */
+#cargar-libro {
+    background-color: #f0f8ff; /* Un fondo azul muy claro */
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+
+#cargar-libro-form {
+    max-width: 700px;
+    margin: 2rem auto; /* Más espacio arriba y abajo */
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Etiquetas a la izquierda, inputs a la derecha */
+    gap: 1.5rem; /* Más espacio entre los elementos */
+    background: #fff;
+    padding: 3rem;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1); /* Sombra más pronunciada */
+}
+
+
+#cargar-libro-form > label {
+    text-align: right;
+    font-weight: bold;
+    color: #555;
+}
+
+
+#cargar-libro-form > input,
+#cargar-libro-form > select,
+#cargar-libro-form > textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+}
+
+
+#cargar-libro-form > input:focus,
+#cargar-libro-form > select:focus,
+#cargar-libro-form > textarea:focus {
+    border-color: #5d5dff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(93, 93, 255, 0.3);
+}
+
+
+#cargar-libro-form > textarea {
+    grid-column: 2 / -1; /* Ocupa todo el ancho */
+}
+
+
+#cargar-libro-form > button {
+    grid-column: 1 / -1; /* Ocupa todo el ancho */
+    background-color: #5d5dff;
+    color: #fff;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+#cargar-libro-form > button:hover {
+    background-color: #4a4af0;
+    transform: scale(1.02);
+}
+
+
+#cargar-libro-form > input::file-selector-button {
+    padding: 10px 15px;
+    background-color: #eee;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+#cargar-libro-form > input::file-selector-button:hover {
+    background-color: #ddd;
+}
+
+
+/* Responsive para el formulario */
+@media (max-width: 768px) {
+    #cargar-libro-form {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+
+    #cargar-libro-form > label {
+        text-align: left;
+    }
+
+
+    #cargar-libro-form > textarea {
+        grid-column: 1 / -1;
+    }
+}
